@@ -8,17 +8,17 @@ export default function SnapshotsImpact() {
     {
       icon: Bot,
       title: 'GenAI Support Copilot',
-      description: '30% faster ticket resolution with retrieval-augmented workflows'
+      description: 'Ticket resolution time reduced by thirty percent with retrieval-augmented workflows and deflection automation.'
     },
     {
       icon: Database,
       title: 'Data Platform Revamp',
-      description: 'Migrated to modern ELT + semantic layer; dashboards trusted by Finance'
+      description: 'Migration to modern ELT with a governed semantic layer enabled finance-ready dashboards and consistent metrics.'
     },
     {
       icon: Zap,
       title: 'Frontend Performance Push',
-      description: 'Lighthouse 95+ and 20% higher conversion after two-week sprint'
+      description: 'Lighthouse scores above ninety-five and a measurable uplift in conversion after a focused two-week sprint.'
     }
   ]
 

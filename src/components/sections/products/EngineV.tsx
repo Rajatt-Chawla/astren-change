@@ -9,7 +9,7 @@ export default function EngineV() {
     <section className="py-24 bg-bg-base">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Visual */}
+          {/* Visual - Engine v Infographic */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -17,63 +17,20 @@ export default function EngineV() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="bg-surface-card border border-border-soft rounded-xl p-8 shadow-card">
-              <h3 className="text-xl font-bold text-text-primary mb-6">Engine v Platform</h3>
-              
-              {/* Platform Preview */}
-              <div className="space-y-4">
-                <div className="bg-bg-base rounded-lg p-4 border border-border-soft">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <Cpu className="w-5 h-5 text-accent-primary" />
-                    <span className="font-semibold text-text-primary">AI Processing Engine</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-accent-primary/30 rounded w-3/4"></div>
-                    <div className="h-3 bg-text-muted/30 rounded w-1/2"></div>
-                    <div className="h-3 bg-text-muted/30 rounded w-2/3"></div>
-                  </div>
-                </div>
-                
-                <div className="bg-bg-base rounded-lg p-4 border border-border-soft">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <Database className="w-5 h-5 text-accent-secondary" />
-                    <span className="font-semibold text-text-primary">Data Orchestration</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-accent-secondary/30 rounded w-2/3"></div>
-                    <div className="h-3 bg-text-muted/30 rounded w-1/2"></div>
-                  </div>
-                </div>
-                
-                <div className="bg-bg-base rounded-lg p-4 border border-border-soft">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <Zap className="w-5 h-5 text-success" />
-                    <span className="font-semibold text-text-primary">Workflow Automation</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-success/30 rounded w-1/2"></div>
-                    <div className="h-3 bg-text-muted/30 rounded w-3/4"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Platform Features */}
-              <div className="mt-6 pt-6 border-t border-border-soft">
-                <div className="text-sm font-semibold text-text-primary mb-4">Platform Features</div>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-success rounded-full"></div>
-                    <span className="text-xs text-text-secondary">Multi-model AI support</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-success rounded-full"></div>
-                    <span className="text-xs text-text-secondary">Real-time processing</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-success rounded-full"></div>
-                    <span className="text-xs text-text-secondary">Scalable infrastructure</span>
-                  </div>
-                </div>
+            <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+              <img
+                src="/assets/images/engine-v-platform.png"
+                alt="Astrenox Engine v — AI Platform Architecture"
+                className="w-full h-auto object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
+                  if (fallback) (fallback as HTMLElement).style.display = 'block'
+                }}
+              />
+              <div className="fallback-infographic hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)] text-center">
+                <h3 className="text-xl font-bold mb-4 text-text-primary">Engine v Platform</h3>
+                <p className="text-text-secondary text-sm">AI Processing • Data Orchestration • Workflow Automation</p>
               </div>
             </div>
 

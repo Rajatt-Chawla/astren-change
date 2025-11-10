@@ -11,8 +11,6 @@ import SnapshotsImpact from '@/components/sections/hire-talent/SnapshotsImpact'
 import PricingSignals from '@/components/sections/hire-talent/PricingSignals'
 import FAQ from '@/components/sections/hire-talent/FAQ'
 import TalentRequestForm from '@/components/sections/hire-talent/TalentRequestForm'
-import CTA from '@/components/sections/CTA'
-
 export default function HireTalent() {
   return (
     <main className="min-h-screen bg-bg-base">
@@ -28,7 +26,6 @@ export default function HireTalent() {
       <PricingSignals />
       <FAQ />
       <TalentRequestForm />
-      <CTA />
       <Footer />
     </main>
   )

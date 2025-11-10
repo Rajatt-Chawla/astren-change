@@ -10,6 +10,8 @@ import {
   Users,
   ArrowRight
 } from 'lucide-react'
+import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function Features() {
   const features = [
@@ -119,14 +121,9 @@ export default function Features() {
             <p className="text-text-secondary mb-6">
               Let's discuss your project and create something amazing together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-accent-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-cta-solid-hover hover:shadow-float hover:scale-102 transition-all duration-fast">
-                Start Your Project
-              </button>
-              <button className="bg-transparent text-text-primary border border-cta-outline-border px-6 py-3 rounded-lg font-semibold hover:bg-cta-outline-hover-bg hover:border-white/28 transition-all duration-fast">
-                View Portfolio
-              </button>
-            </div>
+            <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
+              Schedule your scoping session
+            </Button>
           </div>
         </motion.div>
       </div>

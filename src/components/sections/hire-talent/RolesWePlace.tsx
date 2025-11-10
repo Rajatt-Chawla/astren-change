@@ -8,7 +8,7 @@ export default function RolesWePlace() {
     {
       icon: Brain,
       title: 'AI/ML & GenAI',
-      roles: ['Applied AI Engineer', 'Prompt/Agent Engineer', 'RAG Specialist', 'MLOps', 'CV/NLP']
+      roles: ['Applied AI Engineer', 'Agent Engineer', 'RAG Specialist', 'MLOps', 'Computer Vision', 'NLP']
     },
     {
       icon: Database,
@@ -45,15 +45,15 @@ export default function RolesWePlace() {
   const pods = [
     {
       name: 'Forward-Deployed Squad',
-      description: 'TPM + 2–6 engineers for complete project delivery'
+      description: 'TPM plus two to six engineers embedded on a forward-deployed workstream'
     },
     {
       name: 'Data/AI Pod',
-      description: 'Specialized team for data science and AI initiatives'
+      description: 'Specialized pod for analytics, data platform, and AI initiatives'
     },
     {
       name: 'Platform Pod',
-      description: 'Infrastructure and platform engineering specialists'
+      description: 'Infrastructure, DevOps, and platform engineering pod to stabilize core systems'
     }
   ]
 
@@ -76,8 +76,7 @@ export default function RolesWePlace() {
             <span className="block gradient-text">of your stack</span>
           </h2>
           <p className="text-lead text-text-secondary max-w-3xl mx-auto">
-            From individual specialists to complete engineering squads, we provide 
-            the talent you need to accelerate your development and achieve your goals.
+            Builders for every layer of your stack—from applied AI to product leadership and managed pods that own entire workstreams.
           </p>
         </motion.div>
 

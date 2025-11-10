@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle, Brain, Users, Settings, Code, BarChart } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function WhatWeDo() {
   const services = [
@@ -98,8 +99,8 @@ export default function WhatWeDo() {
             <p className="text-text-secondary mb-6">
               Let's begin with a strategic assessment and create a roadmap for your AI-first future.
             </p>
-            <Button variant="primary" size="lg" className="group">
-              Start your transformation
+            <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
+              Schedule your scoping session
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
             </Button>
           </div>

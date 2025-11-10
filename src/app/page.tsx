@@ -1,9 +1,9 @@
 import Hero from '@/components/sections/Hero'
 import OurApproach from '@/components/sections/OurApproach'
 import TechnologyEcosystem from '@/components/sections/TechnologyEcosystem'
-import Testimonials from '@/components/sections/Testimonials'
+import SuccessStories from '@/components/sections/SuccessStories'
 import FAQ from '@/components/sections/FAQ'
-import CTA from '@/components/sections/CTA'
+import GetInTouch from '@/components/sections/GetInTouch'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 
@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <OurApproach />
       <TechnologyEcosystem />
-      <Testimonials />
+      <SuccessStories />
       <FAQ />
-      <CTA />
+      <GetInTouch />
       <Footer />
     </main>
   )

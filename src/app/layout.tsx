@@ -46,7 +46,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body suppressHydrationWarning className={`${inter.className} antialiased`}>
         {children}
         <NoupeWidget />
       </body>

@@ -34,7 +34,9 @@ export default function PricingSignals() {
               <Users className="w-6 h-6 text-accent-primary" />
             </div>
             <h3 className="text-lg font-bold text-text-primary mb-3">Individuals</h3>
-            <p className="text-text-secondary">Monthly retainer, billed per role seniority</p>
+            <p className="text-text-secondary">
+              Monthly retainers based on role seniority and scope of responsibility.
+            </p>
           </motion.div>
 
           <motion.div
@@ -48,7 +50,9 @@ export default function PricingSignals() {
               <Target className="w-6 h-6 text-accent-secondary" />
             </div>
             <h3 className="text-lg font-bold text-text-primary mb-3">Squads</h3>
-            <p className="text-text-secondary">Outcome-based pricing tied to features/story-points</p>
+            <p className="text-text-secondary">
+              Outcome-based pricing tied to features or story-points with jointly defined acceptance criteria.
+            </p>
           </motion.div>
 
           <motion.div
@@ -61,25 +65,22 @@ export default function PricingSignals() {
             <div className="w-12 h-12 bg-success/14 border border-white/10 rounded-lg flex items-center justify-center mx-auto mb-4">
               <DollarSign className="w-6 h-6 text-success" />
             </div>
-            <h3 className="text-lg font-bold text-text-primary mb-3">Fractional Leaders</h3>
-            <p className="text-text-secondary">Fixed weekly blocks</p>
+            <h3 className="text-lg font-bold text-text-primary mb-3">Fractional leaders</h3>
+            <p className="text-text-secondary">
+              Fixed weekly blocks to ensure cadence, availability, and leadership continuity.
+            </p>
           </motion.div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-8 text-center"
+          className="mt-10 text-center text-text-secondary"
         >
-          <p className="text-text-secondary mb-4">
-            Ask for a tailored plan based on scope and timeline.
-          </p>
-          <button className="bg-accent-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-cta-solid-hover hover:shadow-float hover:scale-102 transition-all duration-fast">
-            Get a tailored quote
-          </button>
-        </motion.div>
+          A tailored plan is prepared after intake once outcomes, constraints, and timelines are confirmed.
+        </motion.p>
       </div>
     </section>
   )

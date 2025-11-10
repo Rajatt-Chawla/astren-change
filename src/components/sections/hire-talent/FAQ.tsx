@@ -10,27 +10,27 @@ export default function FAQ() {
   const faqs = [
     {
       question: 'How fast can we start?',
-      answer: 'Often within a week after intake; complex roles may need longer.'
+      answer: 'Most engagements begin within a week after intake. Complex or niche roles may require additional time to source and evaluate.'
     },
     {
       question: 'Can you match our stack and rituals?',
-      answer: 'Yes—your tracker, your stand-ups; we add our quality gates.'
+      answer: 'Yes. We operate inside your tracker, stand-ups, and release cadence while adding our quality gates for code and delivery.'
     },
     {
       question: 'Do you provide time-zone overlap?',
-      answer: 'We staff to your overlap requirement during intake.'
+      answer: 'We staff to your overlap requirement during intake and confirm working windows during contracting.'
     },
     {
-      question: 'What if the fit isn\'t right?',
-      answer: 'We replace quickly and help stabilize the roadmap.'
+      question: 'What if the fit is not right?',
+      answer: 'We initiate a rapid replacement and support stabilization with a handover plan and clear acceptance criteria.'
     },
     {
       question: 'Can you help define the role?',
-      answer: 'Absolutely—most requests start with outcomes, then skills.'
+      answer: 'Yes. Many requests begin with outcomes. We translate those outcomes into skills, seniority bands, and success measures.'
     },
     {
       question: 'Do you support security reviews?',
-      answer: 'Yes—vendor assessments, onboarding artifacts, and access controls.'
+      answer: 'Yes. We complete vendor assessments, provide onboarding artifacts, and implement access controls with audit logs.'
     }
   ]
 

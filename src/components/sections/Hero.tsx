@@ -1,13 +1,43 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    // Ensure video plays when component mounts
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log('Video autoplay prevented:', error)
+      })
+    }
+  }, [])
+
   return (
     <section className="relative isolate overflow-hidden">
+      {/* Video background */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{
+          opacity: 0.4, // Translucent video effect
+        }}
+      >
+        <source src="/media/video-background.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for better text visibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-[1]" />
+
       {/* Blended bounding box background */}
       <div
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 z-[2]"
         style={{
           background:
             "radial-gradient(1200px 600px at 60% 10%, rgba(79,70,229,0.20) 0%, rgba(0,0,0,0) 60%), radial-gradient(1000px 500px at 20% 30%, rgba(14,165,233,0.20) 0%, rgba(0,0,0,0) 55%)",
@@ -16,7 +46,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-4 pt-20 pb-16 md:pt-28 md:pb-24">
+      <div className="relative z-[3] mx-auto max-w-7xl px-4 pt-20 pb-16 md:pt-28 md:pb-24">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

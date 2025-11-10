@@ -44,8 +44,7 @@ export default function Execution() {
             
             <h3 className="text-xl font-bold text-text-primary mb-4">Product Transformation</h3>
             <p className="text-text-secondary mb-6">
-              Unicorn PM/engineers deliver outcome-based engagements with AI acceleration. 
-              We build AI-native products that create competitive advantages.
+              We build AI-native products that deliver measurable outcomes and a clear competitive edge.
             </p>
             
             <div className="space-y-3 mb-6">
@@ -83,8 +82,7 @@ export default function Execution() {
             
             <h3 className="text-xl font-bold text-text-primary mb-4">Process Transformation</h3>
             <p className="text-text-secondary mb-6">
-              Comprehensive surveys, stakeholder calls, and baseline metrics lead to 
-              automation implementation with change management.
+              We map workflows and implement automation with clear metrics and change management.
             </p>
             
             <div className="space-y-3 mb-6">
@@ -122,8 +120,7 @@ export default function Execution() {
             
             <h3 className="text-xl font-bold text-text-primary mb-4">People Transformation</h3>
             <p className="text-text-secondary mb-6">
-              Bespoke curricula, hands-on workshops, and upskilling programs ensure 
-              successful AI adoption across your organization.
+              We upskill teams through practical training and workshops so they can use and manage AI confidently.
             </p>
             
             <div className="space-y-3 mb-6">
@@ -147,6 +144,34 @@ export default function Execution() {
             </Button>
           </motion.div>
         </div>
+
+        {/* Execution Process Infographic */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <div className="relative mt-12 flex justify-center">
+            <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+              <img
+                src="/assets/images/ai-transformation-execution.png"
+                alt="Astrenox AI Transformation — Product, Process & People Execution"
+                className="w-full h-auto object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
+                  if (fallback) (fallback as HTMLElement).style.display = 'block'
+                }}
+              />
+              <div className="fallback-infographic hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)] text-center">
+                <h3 className="text-xl font-bold mb-4 text-text-primary">Three Dimensions of Transformation</h3>
+                <p className="text-text-secondary text-sm">Product • Process • People</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

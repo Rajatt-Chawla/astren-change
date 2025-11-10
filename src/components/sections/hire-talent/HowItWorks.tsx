@@ -1,34 +1,33 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Search, Users, Play, CheckCircle, ArrowRight } from 'lucide-react'
-import Button from '@/components/ui/Button'
+import { Search, Users, Play, CheckCircle } from 'lucide-react'
 
 export default function HowItWorks() {
   const steps = [
     {
       icon: Search,
-      title: 'Intake & role design',
-      time: '24–48h',
-      description: 'Scope outcomes, must-have skills, time-zone, and budget requirements for your specific needs.'
+      title: 'Intake and role design',
+      time: '24–48 hours',
+      description: 'We define the outcomes, must-have skills, overlap windows, security constraints, and budget so the search is precise.'
     },
     {
       icon: Users,
-      title: 'Shortlist & interviews',
+      title: 'Shortlist and interviews',
       time: '3–5 days',
-      description: 'Receive 3–5 fits with delivery notes; optional pair-sessions on your code to validate technical fit.'
+      description: 'You receive three to five best-fit options with delivery notes. Optional pair-sessions on your code validate approach and fit.'
     },
     {
       icon: Play,
-      title: 'Trial sprint (optional)',
+      title: 'Trial sprint',
       time: '1 week',
-      description: 'One-week paid pilot to validate velocity, communication, and code quality before full engagement.'
+      description: 'A one-week paid pilot can verify velocity, communication quality, and code practices in your environment.'
     },
     {
       icon: CheckCircle,
       title: 'Onboard & scale',
       time: 'Ongoing',
-      description: 'We handle contracts, security, and ramp-up; expand capacity as your roadmap grows.'
+      description: 'We handle contracts, security onboarding, and ramp. Capacity expands as the roadmap grows with continuity safeguards in place.'
     }
   ]
 
@@ -51,13 +50,12 @@ export default function HowItWorks() {
             <span className="block gradient-text">in four steps</span>
           </h2>
           <p className="text-lead text-text-secondary max-w-3xl mx-auto">
-            Our streamlined process ensures you get the right talent, quickly, 
-            with minimal risk and maximum confidence in the outcome.
+            From request to “in the code” in four steps—built to de-risk hiring and prove fit before you scale.
           </p>
         </motion.div>
 
         {/* Steps */}
-        <div className="space-y-8 mb-16">
+        <div className="space-y-8">
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -98,27 +96,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-surface-card border border-border-soft rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-text-primary mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-text-secondary mb-6">
-              Request your shortlist and start building with elite talent today.
-            </p>
-            <Button variant="primary" size="lg" className="group">
-              Request your shortlist
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

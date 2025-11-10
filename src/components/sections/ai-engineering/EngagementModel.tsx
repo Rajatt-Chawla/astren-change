@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Users, Calendar, MessageSquare, FileText, Code, Slack } from 'lucide-react'
+import { Users, Calendar, MessageSquare, FileText, Code } from 'lucide-react'
+import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function EngagementModel() {
   const engagementFeatures = [
@@ -34,11 +36,6 @@ export default function EngagementModel() {
       icon: Code,
       title: 'Code Submission',
       description: 'Direct code access and collaboration through your preferred development tools and repositories.'
-    },
-    {
-      icon: Slack,
-      title: 'Comms (Slack)',
-      description: 'Real-time communication through Slack integration for instant collaboration and support.'
     }
   ]
 
@@ -87,6 +84,34 @@ export default function EngagementModel() {
           ))}
         </div>
 
+        {/* Engagement Process Infographic */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="relative mt-12 flex justify-center">
+            <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+              <img
+                src="/assets/images/ai-engineering-engagement.png"
+                alt="Astrenox AI Engineering — Engagement Model & Process"
+                className="w-full h-auto object-contain"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
+                  if (fallback) (fallback as HTMLElement).style.display = 'block'
+                }}
+              />
+              <div className="fallback-infographic hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)] text-center">
+                <h3 className="text-xl font-bold mb-4 text-text-primary">AI Engineering Engagement Process</h3>
+                <p className="text-text-secondary text-sm">Dedicated Team • Sprint Cycles • Project Management • Code Collaboration</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -102,14 +127,9 @@ export default function EngagementModel() {
             <p className="text-text-secondary mb-6">
               Let's discuss your AI engineering needs and create a custom engagement plan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-accent-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-cta-solid-hover hover:shadow-float hover:scale-102 transition-all duration-fast">
-                Get Started
-              </button>
-              <button className="bg-transparent text-text-primary border border-cta-outline-border px-6 py-3 rounded-lg font-semibold hover:bg-cta-outline-hover-bg hover:border-white/28 transition-all duration-fast">
-                See Intelligent Automations
-              </button>
-            </div>
+            <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
+              Schedule your scoping session
+            </Button>
           </div>
         </motion.div>
       </div>

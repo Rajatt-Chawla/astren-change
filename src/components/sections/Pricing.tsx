@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Check, Star } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function Pricing() {
   const plans = [
@@ -143,6 +144,7 @@ export default function Pricing() {
                 <Button 
                   variant={plan.popular ? 'primary' : 'secondary'} 
                   className="w-full"
+                  onClick={openCalendly}
                 >
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </Button>
@@ -167,14 +169,9 @@ export default function Pricing() {
               We offer tailored packages for unique requirements. 
               Let's discuss your specific needs and create a custom quote.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary">
-                Get Custom Quote
-              </Button>
-              <Button variant="tertiary">
-                Schedule Consultation
-              </Button>
-            </div>
+            <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
+              Schedule your scoping session
+            </Button>
           </div>
         </motion.div>
       </div>

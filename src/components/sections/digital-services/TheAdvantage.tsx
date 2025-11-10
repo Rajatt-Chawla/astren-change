@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { TrendingDown, Zap, Shield, Rocket } from 'lucide-react'
+import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function TheAdvantage() {
   const advantages = [
@@ -87,14 +89,9 @@ export default function TheAdvantage() {
             <p className="text-text-secondary mb-6">
               Start with a focused scoping session. We'll align the plan and ship the work.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-accent-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-cta-solid-hover hover:shadow-float hover:scale-102 transition-all duration-fast">
-                Let's Build Your Future
-              </button>
-              <button className="bg-transparent text-text-primary border border-cta-outline-border px-6 py-3 rounded-lg font-semibold hover:bg-cta-outline-hover-bg hover:border-white/28 transition-all duration-fast">
-                Schedule Scoping Session
-              </button>
-            </div>
+            <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
+              Schedule your scoping session
+            </Button>
           </div>
         </motion.div>
       </div>

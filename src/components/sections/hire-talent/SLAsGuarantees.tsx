@@ -8,22 +8,22 @@ export default function SLAsGuarantees() {
     {
       icon: Clock,
       title: 'Response SLA',
-      description: 'Shortlist within 3–5 business days for common roles'
+      description: 'Shortlists within three to five business days for common roles with proactive communication on edge cases.'
     },
     {
       icon: CheckCircle,
       title: 'Continuity',
-      description: 'Rapid replacement if availability changes'
+      description: 'Rapid replacement and structured knowledge transfer if availability changes.'
     },
     {
       icon: FileText,
       title: 'Quality gates',
-      description: 'Periodic code audits and velocity reviews for managed squads'
+      description: 'Periodic code audits, velocity reviews, and sprint health checks for managed squads.'
     },
     {
       icon: Shield,
       title: 'IP & Security',
-      description: 'Assignment agreements, access logs, and environment isolation'
+      description: 'Assignment agreements, access logs, environment isolation, and revocation procedures safeguard your assets.'
     }
   ]
 

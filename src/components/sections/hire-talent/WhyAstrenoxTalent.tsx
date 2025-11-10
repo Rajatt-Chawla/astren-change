@@ -8,32 +8,32 @@ export default function WhyAstrenoxTalent() {
     {
       icon: Clock,
       title: 'Shortlists in days, not weeks',
-      description: 'We maintain an always-warm bench across AI, data, and product with pre-vetted talent ready to start immediately.'
+      description: 'We maintain an always-warm bench across AI, data, product, and platform so you see credible options quickly.'
     },
     {
       icon: CheckCircle,
       title: 'Vetted for outcomes',
-      description: 'Candidates are graded on real delivery patterns, not just LeetCode. We assess practical skills and proven results.'
+      description: 'We evaluate real delivery patterns, system design judgment, and collaboration skills to ensure production-grade output.'
     },
     {
       icon: Users,
       title: 'Pods or individuals',
-      description: 'Place a single specialist or spin up a managed squad with PM, QA, and DevOps for complete project coverage.'
+      description: 'Place a specialist for a focused gap or deploy a managed squad with TPM, QA, and DevOps to own a workstream end to end.'
     },
     {
       icon: Clock,
       title: 'Time-zone coverage',
-      description: 'India, EMEA, and US overlap windows ensure continuous progress across your development cycles.'
+      description: 'We staff for India, EMEA, and US overlap windows to maintain continuous progress and predictable handoffs.'
     },
     {
       icon: Shield,
       title: 'Security-first',
-      description: 'NDAs, IP assignment, least-privilege access, and audited workflows protect your intellectual property.'
+      description: 'NDAs, IP assignment, least-privilege access, and audited workflows are standard to protect your code and data.'
     },
     {
       icon: DollarSign,
       title: 'Aligned incentives',
-      description: 'Outcome-based models for squads tied to features and milestones, not just hours worked.'
+      description: 'Outcome-based models for squads keep attention on features, reliability, and measurable value rather than hours logged.'
     }
   ]
 
@@ -56,8 +56,7 @@ export default function WhyAstrenoxTalent() {
             <span className="block gradient-text">in one motion</span>
           </h2>
           <p className="text-lead text-text-secondary max-w-3xl mx-auto">
-            Our talent platform combines the speed of on-demand hiring with the quality 
-            of pre-vetted professionals and the accountability of outcome-based engagement.
+            Speed, quality, and accountability live in the same motion—designed for teams that need talent deployed and delivering immediately.
           </p>
         </motion.div>
 

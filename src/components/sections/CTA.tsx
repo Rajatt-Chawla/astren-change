@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import { openTallyPopup } from '@/lib/engagementLinks'
 
 export default function CTA() {
   return (
@@ -60,15 +61,11 @@ export default function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+              className="flex justify-center mb-8"
             >
-              <Button variant="primary" size="lg" className="group">
+              <Button variant="primary" size="lg" className="group" onClick={openTallyPopup}>
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
-              </Button>
-              
-              <Button variant="secondary" size="lg">
-                Contact Us
               </Button>
             </motion.div>
 

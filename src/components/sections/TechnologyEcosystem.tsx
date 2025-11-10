@@ -4,6 +4,45 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Zap, Layers } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
+const foundationProviders = [
+  {
+    name: 'OpenAI',
+    logo: '/logos/openai.svg',
+    caption: 'Conversational intelligence & reasoning models',
+    glow: 'shadow-[0_0_30px_rgba(14,165,233,0.2)]',
+  },
+  {
+    name: 'Anthropic',
+    logo: '/logos/anthropic.svg',
+    caption: 'Constitutional AI for safety-critical deployments',
+    glow: 'shadow-[0_0_30px_rgba(249,115,22,0.18)]',
+  },
+  {
+    name: 'Google',
+    logo: '/logos/google.svg',
+    caption: 'Vertex AI & Gemini powering multimodal workloads',
+    glow: 'shadow-[0_0_30px_rgba(59,130,246,0.18)]',
+  },
+  {
+    name: 'Meta',
+    logo: '/logos/meta.svg',
+    caption: 'Llama models for open-weight extensibility',
+    glow: 'shadow-[0_0_30px_rgba(59,130,246,0.18)]',
+  },
+]
+
+const orchestrationTools = [
+  { name: 'LangGraph', logo: '/logos/langgraph.svg', accent: 'from-sky-400/30 to-sky-500/10' },
+  { name: 'CrewAI', logo: '/logos/crewai.svg', accent: 'from-violet-400/30 to-violet-500/10' },
+  { name: 'n8n', logo: '/logos/n8n.svg', accent: 'from-rose-400/30 to-rose-500/10' },
+]
+
+const enterpriseAssurance = [
+  { label: 'Security & Compliance', color: 'bg-sky-400' },
+  { label: 'Observability & Monitoring', color: 'bg-violet-400' },
+  { label: 'Scalable Infrastructure', color: 'bg-emerald-400' },
+]
+
 export default function TechnologyEcosystem() {
   return (
     <section className="py-24 bg-bg-base">
@@ -70,7 +109,7 @@ export default function TechnologyEcosystem() {
             </Button>
           </motion.div>
 
-          {/* Visual - AI Technology Stack */}
+          {/* Visual - AI Technology Ecosystem Infographic */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,60 +117,84 @@ export default function TechnologyEcosystem() {
             viewport={{ once: true }}
             className="relative"
           >
-            <aside className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)]">
-              <h3 className="text-center text-base font-semibold mb-6">AI Technology Stack</h3>
+            <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+              <div className="relative rounded-3xl border border-white/10 bg-white/[0.02] p-10 sm:p-14 backdrop-blur-sm">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.15),_transparent_60%)]" />
 
-              {/* 2x2 grid — foundation model providers */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                {[
-                  { name: "OpenAI", logo: "/logos/openai.svg" },
-                  { name: "Anthropic", logo: "/logos/anthropic.svg" },
-                  { name: "Google", logo: "/logos/google.svg" },
-                  { name: "Meta", logo: "/logos/meta.svg" },
-                ].map((p) => (
-                  <div
-                    key={p.name}
-                    className="group flex flex-col items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-5 hover:border-sky-400/50 transition"
-                  >
-                    <img src={p.logo} alt={p.name} className="h-8 w-auto opacity-90 group-hover:opacity-100" />
-                    <span className="text-sm font-medium text-white/85 group-hover:text-white">{p.name}</span>
+                <div className="relative flex flex-col gap-12">
+                  <div className="text-center">
+                    <p className="uppercase tracking-[0.3em] text-[11px] text-accent-primary/80 mb-3">
+                      AI Technology Stack
+                    </p>
+                    <p className="text-xs text-text-secondary max-w-xl mx-auto">
+                      Big-priority logos signal the trusted execution layer. Tight copy underneath clarifies each role so
+                      stakeholders instantly understand how the stack fits together.
+                    </p>
                   </div>
-                ))}
-              </div>
 
-              {/* Orchestration & Integration */}
-              <h4 className="text-center text-xs uppercase tracking-wide text-white/60 mb-3">
-                Orchestration &amp; Integration
-              </h4>
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {[
-                  { name: "LangGraph", logo: "/logos/langgraph.svg" },
-                  { name: "CrewAI", logo: "/logos/crewai.svg" },
-                  { name: "n8n", logo: "/logos/n8n.svg" },
-                ].map((t) => (
-                  <div
-                    key={t.name}
-                    className="group flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-2 hover:border-cyan-400/50 transition"
-                  >
-                    <img src={t.logo} alt={t.name} className="h-6 w-auto opacity-90 group-hover:opacity-100" />
-                    <span className="text-sm font-medium text-white/85 group-hover:text-white">{t.name}</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {foundationProviders.map((provider) => (
+                      <div
+                        key={provider.name}
+                        className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8 text-center transition duration-300 hover:border-accent-primary/60"
+                      >
+                        <div
+                          className={`pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100 ${provider.glow}`}
+                        />
+                        <div className="relative flex flex-col items-center gap-5">
+                          <img
+                            src={provider.logo}
+                            alt={`${provider.name} logo`}
+                            className="h-24 sm:h-28 object-contain transition duration-300 group-hover:scale-105"
+                          />
+                          <p className="text-[10px] uppercase tracking-[0.35em] text-text-secondary/60">
+                            {provider.name}
+                          </p>
+                          <p className="text-[11px] text-text-secondary/80 leading-relaxed max-w-xs">
+                            {provider.caption}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
 
-              {/* Enterprise Features */}
-              <ul className="space-y-2 text-sm text-white/75">
-                <li className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-sky-400" /> Security &amp; Compliance
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-indigo-400" /> Observability &amp; Monitoring
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-cyan-400" /> Scalable Infrastructure
-                </li>
-              </ul>
-            </aside>
+                  <div className="text-center">
+                    <p className="uppercase tracking-[0.35em] text-[11px] text-text-secondary/80 mb-6">
+                      Orchestration & Integration
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      {orchestrationTools.map((tool) => (
+                        <div
+                          key={tool.name}
+                          className={`group relative flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-5 py-3 text-sm text-text-primary transition duration-300 hover:border-accent-primary/60`}
+                        >
+                          <div
+                            className={`absolute inset-0 rounded-full bg-gradient-to-r ${tool.accent} opacity-0 transition duration-300 group-hover:opacity-100`}
+                          />
+                          <img
+                            src={tool.logo}
+                            alt={`${tool.name} logo`}
+                            className="relative h-5 w-5 object-contain"
+                          />
+                          <span className="relative text-xs font-semibold uppercase tracking-[0.2em] text-text-secondary/70 group-hover:text-text-primary">
+                            {tool.name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-4 text-sm text-text-secondary">
+                    {enterpriseAssurance.map((item) => (
+                      <div key={item.label} className="flex items-center gap-3">
+                        <span className={`h-2.5 w-2.5 rounded-full ${item.color}`} />
+                        <span>{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Floating Elements */}
             <motion.div

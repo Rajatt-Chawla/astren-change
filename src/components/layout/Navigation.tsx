@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { openTallyPopup } from '@/lib/engagementLinks'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,9 +32,7 @@ export default function Navigation() {
       href: '/products',
       dropdown: [
         { name: 'Santrix — Enterprise AI Copilot', href: '/products/santrix' },
-        { name: 'Orzora — Market Research Copilot', href: '/products/orzora' },
-        { name: 'ANX Intelligence', href: '/products/anx-intelligence' },
-        { name: 'Engine V', href: '/products/engine-v' }
+        { name: 'Orzora — Market Research Copilot', href: '/products/orzora' }
       ]
     },
     { name: 'Digital Services', href: '/consulting-modernization' },
@@ -84,12 +83,13 @@ export default function Navigation() {
           </ul>
 
           {/* CTA Button */}
-          <a
-            href="#get-started"
+          <button
+            type="button"
+            onClick={openTallyPopup}
             className="hidden md:block rounded-full border border-white/15 px-3.5 py-1.5 text-sm font-medium hover:bg-white/5"
           >
             Get Started
-          </a>
+          </button>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -132,12 +132,16 @@ export default function Navigation() {
                 </div>
               ))}
               <div className="px-3 py-2">
-                <a
-                  href="#get-started"
+                <button
+                  type="button"
+                  onClick={() => {
+                    openTallyPopup()
+                    setIsOpen(false)
+                  }}
                   className="block w-full text-center rounded-full border border-white/15 px-3.5 py-1.5 text-sm font-medium hover:bg-white/5"
                 >
                   Get Started
-                </a>
+                </button>
               </div>
             </div>
           </div>

@@ -1,24 +1,28 @@
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/mvp-studio/Hero'
-import ThePromise from '@/components/sections/mvp-studio/ThePromise'
-import WhatWeBuild from '@/components/sections/mvp-studio/WhatWeBuild'
-import HowWeBuild from '@/components/sections/mvp-studio/HowWeBuild'
+import TrustedBy from '@/components/sections/mvp-studio/TrustedBy'
+import ForFounders from '@/components/sections/mvp-studio/ForFounders'
+import Numbers from '@/components/sections/mvp-studio/Numbers'
+import OurWork from '@/components/sections/mvp-studio/OurWork'
+import Process from '@/components/sections/mvp-studio/Process'
+import WhatsIncluded from '@/components/sections/mvp-studio/WhatsIncluded'
 import Pricing from '@/components/sections/mvp-studio/Pricing'
-import WhyUs from '@/components/sections/mvp-studio/WhyUs'
-import CTA from '@/components/sections/CTA'
+import FAQ from '@/components/sections/mvp-studio/FAQ'
 
 export default function MVPStudio() {
   return (
     <main className="min-h-screen bg-bg-base">
       <Navigation />
       <Hero />
-      <ThePromise />
-      <WhatWeBuild />
-      <HowWeBuild />
+      <TrustedBy />
+      <ForFounders />
+      <Numbers />
+      <OurWork />
+      <Process />
+      <WhatsIncluded />
       <Pricing />
-      <WhyUs />
-      <CTA />
+      <FAQ />
       <Footer />
     </main>
   )

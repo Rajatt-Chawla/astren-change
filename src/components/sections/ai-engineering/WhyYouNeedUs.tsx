@@ -81,13 +81,34 @@ export default function WhyYouNeedUs() {
           className="mt-16"
         >
           <div className="bg-surface-card border border-border-soft rounded-xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-text-primary mb-4">
-              The Astrenox Solution
-            </h3>
-            <p className="text-lead text-text-secondary max-w-3xl mx-auto">
-              Skip the hiring risks, avoid the learning curve, and start building AI solutions immediately. 
-              Our pre-vetted teams deliver production-ready code from day one.
-            </p>
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-text-primary mb-4">
+                The Astrenox Solution
+              </h3>
+              <p className="text-lead text-text-secondary">
+                Skip the hiring risks, avoid the learning curve, and start building AI solutions immediately. 
+                Our pre-vetted teams deliver production-ready code from day one.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <div className="relative mx-auto max-w-4xl rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+                <img
+                  src="/assets/images/ai-engineering-astrenox-solution.png"
+                  alt="Astrenox AI Engineering solution overview infographic"
+                  className="w-full h-auto object-contain"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                    const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
+                    if (fallback) (fallback as HTMLElement).style.display = 'block'
+                  }}
+                />
+                <div className="fallback-infographic hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)] text-center">
+                  <h4 className="text-xl font-semibold text-text-primary mb-2">Astrenox AI Engineering Solution</h4>
+                  <p className="text-sm text-text-secondary">Dedicated Teams • Proven Frameworks • Accelerated Delivery</p>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import Button from '@/components/ui/Button'
@@ -67,19 +68,19 @@ export default function TalentRequestForm() {
 
             <div>
               <label className="block text-sm font-semibold text-text-primary mb-2">
-                Role(s) & Seniority
+                Role or Roles & Seniority
               </label>
               <textarea
                 className="w-full px-4 py-3 bg-bg-base border border-border-soft rounded-lg text-text-primary placeholder-text-muted focus:outline-none focus:ring-2 focus:ring-accent-primary/35 focus:border-accent-primary/45 transition-all duration-fast"
                 rows={3}
-                placeholder="Describe the roles you need (e.g., Senior AI Engineer, Product Manager, etc.)"
+                placeholder="Describe the roles and seniority needed (e.g., Senior AI Engineer, Staff PM, etc.)"
               />
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-text-primary mb-2">
-                  Stack
+                  Tech Stack
                 </label>
                 <input
                   type="text"
@@ -146,10 +147,12 @@ export default function TalentRequestForm() {
             </div>
 
             <div className="text-center">
-              <Button variant="primary" size="lg" className="group">
-                Submit & get a shortlist
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
-              </Button>
+              <Link href="/get-started?intent=talent" className="inline-flex">
+                <Button variant="primary" size="lg" className="group">
+                  Submit &amp; get a shortlist
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
+                </Button>
+              </Link>
             </div>
           </form>
         </motion.div>

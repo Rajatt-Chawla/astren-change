@@ -1,39 +1,39 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Brain, Code, Users, FileText, CheckCircle } from 'lucide-react'
+import { Brain, Code, Users, FileText, CheckCircle, ClipboardCheck } from 'lucide-react'
 
 export default function VettingQuality() {
   const vettingSteps = [
     {
       icon: Brain,
       title: 'Technical screen',
-      description: 'Systems thinking, architecture, and debugging under constraints to assess real-world problem-solving skills.'
+      description: 'We assess systems thinking, architecture trade-offs, debugging under constraints, and real-world decision making.'
     },
     {
       icon: Code,
       title: 'Hands-on build',
-      description: 'Repo-based challenge reflecting your domain (APIs, data, agents, or UI flows) to test practical skills.'
+      description: 'A repository-based challenge reflects your domain across APIs, data pipelines, agents, or UI flows with observable outcomes.'
     },
     {
       icon: Users,
       title: 'Pair programming',
-      description: 'Live session to test collaboration, problem framing, and communication skills in real-time.'
+      description: 'Live collaboration tests problem framing, code clarity, and communication.'
     },
     {
       icon: FileText,
       title: 'Code review',
-      description: 'Maintainability, observability hooks, tests, and performance trade-offs assessment.'
+      description: 'We check maintainability, observability hooks, tests, and performance characteristics for long-term sustainability.'
     },
     {
       icon: CheckCircle,
       title: 'Delivery behaviors',
-      description: 'Estimation, ticket hygiene, PR discipline, and async communication evaluation.'
+      description: 'We examine estimation accuracy, ticket hygiene, pull request discipline, and async communication habits.'
     },
     {
-      icon: Users,
+      icon: ClipboardCheck,
       title: 'References & reliability',
-      description: 'Prior managers, delivery metrics, and release track record verification.'
+      description: 'We speak with prior managers and review delivery metrics and release track record.'
     }
   ]
 
@@ -91,11 +91,9 @@ export default function VettingQuality() {
           className="mt-16"
         >
           <div className="bg-surface-card border border-border-soft rounded-xl p-8 text-center">
-            <h3 className="text-xl font-bold text-text-primary mb-4">
-              What You Get
-            </h3>
+            <h3 className="text-xl font-bold text-text-primary mb-4">What You Get</h3>
             <p className="text-text-secondary mb-6">
-              Output to you: scorecard + sample code + interviewer notes
+              Output to you: A structured scorecard, sample code, and interviewer notes that inform your final decision.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">

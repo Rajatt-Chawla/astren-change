@@ -27,6 +27,26 @@ export default function HowWeBuild() {
           </p>
         </motion.div>
 
+        {/* Build Process Infographic */}
+        <div className="relative mt-12 flex justify-center mb-12">
+          <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+            <img
+              src="/assets/images/mvp-studio-build-process.png"
+              alt="Astrenox MVP Studio — 8-Week Build Process"
+              className="w-full h-auto object-contain"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+                const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
+                if (fallback) (fallback as HTMLElement).style.display = 'block'
+              }}
+            />
+            <div className="fallback-infographic hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)] text-center">
+              <h3 className="text-xl font-bold mb-4 text-text-primary">8-Week MVP Build Process</h3>
+              <p className="text-text-secondary text-sm">Scoping • Foundation • Features • Polish • Handoff</p>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-6">
           {steps.map((step, index) => (
             <motion.div

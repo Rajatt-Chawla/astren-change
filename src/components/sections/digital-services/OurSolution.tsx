@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { FileText, Code, ArrowRight } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function OurSolution() {
   return (
@@ -134,8 +135,8 @@ export default function OurSolution() {
             </div>
 
             <div className="mt-6">
-              <Button variant="secondary" size="sm" className="group">
-                Let's Build Your Future
+              <Button variant="secondary" size="sm" className="group" onClick={openCalendly}>
+                Schedule your scoping session
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-fast" />
               </Button>
             </div>

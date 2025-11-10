@@ -8,22 +8,22 @@ export default function EngagementModels() {
     {
       icon: Users,
       title: 'Staff Augmentation',
-      description: '1–3 experts embedded into your team with seamless integration and collaboration.'
+      description: 'One to three experts embed with your team to close skill gaps and accelerate critical paths.'
     },
     {
       icon: Target,
       title: 'Managed Squads',
-      description: 'Outcome-based pods (TPM + engineers) with sprint commitments and guaranteed delivery.'
+      description: 'Outcome-based pods with TPM and engineers commit to sprint goals and deliverables with integrated QA and DevOps.'
     },
     {
       icon: Clock,
       title: 'Fractional Leadership',
-      description: 'Part-time CTO/Architect/Head of Data to shape direction and unblock teams.'
+      description: 'Part-time CTO, Architect, or Head of Data sets direction, unblocks teams, and enforces engineering standards.'
     },
     {
       icon: ArrowRight,
       title: 'Build-Operate-Transfer (BOT)',
-      description: 'We assemble and run a dedicated team, then transition to you when ready.'
+      description: 'We assemble and run a dedicated team under our governance, then transition the unit to you when ready.'
     }
   ]
 
@@ -65,6 +65,16 @@ export default function EngagementModels() {
             </motion.div>
           ))}
         </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mt-12 text-center text-text-secondary"
+        >
+          Commercials: Transparent monthly rates for individuals and feature or story-point pricing for squads to align with value delivered.
+        </motion.p>
       </div>
     </section>
   )

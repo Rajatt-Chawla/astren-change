@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Code, Zap, Target } from 'lucide-react'
 import Button from '@/components/ui/Button'
+import { openCalendly } from '@/lib/engagementLinks'
 
 export default function Hero() {
   return (
@@ -61,7 +62,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button variant="primary" size="lg" className="group">
+              <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
               </Button>
