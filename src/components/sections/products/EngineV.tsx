@@ -54,9 +54,6 @@ export default function EngineV() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-secondary/18 border border-accent-secondary/35 text-accent-secondary text-sm font-semibold mb-6">
-              ⚡ Engine v
-            </div>
             
             <h2 className="text-h1 font-bold text-text-primary mb-6">
               The AI Platform

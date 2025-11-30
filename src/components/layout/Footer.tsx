@@ -8,23 +8,19 @@ const quickLinks = [
   { name: 'AI Transformation', href: '/ai-transformation' },
   { name: 'AI Engineering', href: '/ai-engineering' },
   { name: 'Intelligent Automations', href: '/intelligent-automations' },
-  { name: 'Digital Services', href: '/consulting-modernization' }
-]
-
-const services = [
-  'AI Roadmaps & Strategy',
-  'AI Product Engineering',
-  'Automation & Workflow Design',
-  'Data Infrastructure & MLOps',
-  'AI Talent Pods',
-  'MVP Studio'
+  { name: 'Digital & IT Consulting', href: '/consulting-modernization' },
+  { name: 'Hire Talent', href: '/hire-talent' },
+  { name: 'MVP Studio', href: '/mvp-studio' },
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Industries', href: '/industries' },
+  { name: 'Products', href: '/products' }
 ]
 
 const contactDetails = [
   {
     label: 'Address',
-    value: 'C-18, Sector 105, Noida, UP 201304',
-    href: 'https://maps.google.com/?q=C-18%20Sector%20105%20Noida'
+    value: 'Noida, UP',
+    href: 'https://maps.google.com/?q=Noida%20UP'
   },
   {
     label: 'Phone',
@@ -54,7 +50,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.12),_transparent_55%)]" />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="py-16 border-b border-white/10">
-          <div className="grid gap-12 lg:grid-cols-4">
+          <div className="grid gap-12 lg:grid-cols-3">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +59,8 @@ export default function Footer() {
               className="space-y-6"
             >
               <a href="/" className="text-2xl font-semibold tracking-tight text-white">
-                <span className="bg-gradient-to-r from-accent-primary via-sky-400 to-accent-secondary bg-clip-text text-transparent">
+                {/* Logo will be replaced with provided header/footer logo */}
+                <span className="holo-fade neon-glow">
                   Astrenox
                 </span>
               </a>
@@ -104,21 +101,6 @@ export default function Footer() {
                       {link.name}
                     </a>
                   </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <h4 className="text-lg font-semibold text-white">Our Services</h4>
-              <ul className="space-y-3 text-sm text-white/70">
-                {services.map((service) => (
-                  <li key={service}>{service}</li>
                 ))}
               </ul>
             </motion.div>

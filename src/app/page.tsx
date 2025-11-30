@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero'
 import OurApproach from '@/components/sections/OurApproach'
+import ConsultancyComparison from '@/components/sections/ConsultancyComparison'
 import TechnologyEcosystem from '@/components/sections/TechnologyEcosystem'
 import SuccessStories from '@/components/sections/SuccessStories'
 import FAQ from '@/components/sections/FAQ'
@@ -13,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <OurApproach />
+      <ConsultancyComparison />
       <TechnologyEcosystem />
       <SuccessStories />
       <FAQ />

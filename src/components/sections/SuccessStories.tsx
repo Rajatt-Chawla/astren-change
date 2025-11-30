@@ -13,9 +13,9 @@ const stories = [
     solution:
       'Deployed an AI-assisted ops and document automation layer: OCR + LLM parsing for drawings/RFIs/BOQs, auto-tagging and version control, rule-based approvals, and SAP/Tally integrations with immutable audit trails.',
     results: [
-      'RFI turnaround time reduction - 68%',
-      'Document processing accuracy - 98%',
-      'Working capital cycle improvement - 22%'
+      'RFI turnaround time reduction 68%',
+      'Document processing accuracy 98%',
+      'Working capital cycle improvement 22%'
     ]
   },
   {
@@ -27,9 +27,9 @@ const stories = [
     solution:
       'Built a GTM copilot with unified search, auto-assembled SoWs and proposals, competitor battlecards from knowledge bases, and CRM workflow automation for deal reviews and next-best actions.',
     results: [
-      'Proposal creation time reduction - 75%',
-      'Win-rate lift on targeted deals - 14%',
-      'Qualified pipeline velocity increase - 28%'
+      'Proposal creation time reduction 75%',
+      'Win-rate lift on targeted deals 14%',
+      'Qualified pipeline velocity increase 28%'
     ]
   },
   {
@@ -41,9 +41,9 @@ const stories = [
     solution:
       'Launched a headless ecommerce storefront integrated with a lightweight ERP: order orchestration, real-time inventory, MRP and production planning, distributor portal, and GST-compliant finance with Tally bridge.',
     results: [
-      'Stockout reduction - 60%',
-      'Order-to-dispatch time improvement - 45%',
-      'Return rate decrease (RMA) - 18%'
+      'Stockout reduction 60%',
+      'Order-to-dispatch time improvement 45%',
+      'Return rate decrease (RMA) 18%'
     ]
   }
 ]
@@ -59,9 +59,6 @@ export default function SuccessStories() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/16 border border-accent-primary/35 text-accent-primary text-sm font-semibold mb-6">
-            🌟 Success Stories
-          </div>
           <h2 className="text-h1 font-bold text-text-primary mb-6">
             Real Outcomes for
             <span className="block gradient-text">AI Transformation</span>

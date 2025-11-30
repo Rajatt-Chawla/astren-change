@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Shield, Zap, Layers } from 'lucide-react'
 import Button from '@/components/ui/Button'
 
+
 const foundationProviders = [
   {
     name: 'OpenAI',
@@ -29,10 +30,15 @@ const foundationProviders = [
     caption: 'Llama models for open-weight extensibility',
     glow: 'shadow-[0_0_30px_rgba(59,130,246,0.18)]',
   },
+  {
+    name: 'LangGraph',
+    logo: '/logos/langgraph.svg',
+    caption: 'State machine orchestration for complex AI workflows',
+    glow: 'shadow-[0_0_30px_rgba(56,189,248,0.18)]',
+  },
 ]
 
 const orchestrationTools = [
-  { name: 'LangGraph', logo: '/logos/langgraph.svg', accent: 'from-sky-400/30 to-sky-500/10' },
   { name: 'CrewAI', logo: '/logos/crewai.svg', accent: 'from-violet-400/30 to-violet-500/10' },
   { name: 'n8n', logo: '/logos/n8n.svg', accent: 'from-rose-400/30 to-rose-500/10' },
 ]
@@ -55,9 +61,6 @@ export default function TechnologyEcosystem() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/18 border border-accent-primary/35 text-accent-primary text-sm font-semibold mb-6">
-              🔧 Technology Ecosystem
-            </div>
             
             <h2 className="text-h1 font-bold text-text-primary mb-6">
               We Orchestrate the Ecosystem
@@ -118,7 +121,18 @@ export default function TechnologyEcosystem() {
             className="relative"
           >
             <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
-              <div className="relative rounded-3xl border border-white/10 bg-white/[0.02] p-10 sm:p-14 backdrop-blur-sm">
+              <img
+                src="/assets/images/unnamed.jpg"
+                alt="AI Technology Ecosystem - AI Providers (OpenAI, Anthropic, Google, Meta) and Orchestration & Integration tools (LangGraph, CrewAI, N8N)"
+                className="w-full h-auto object-contain rounded-3xl"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
+                  if (fallback) (fallback as HTMLElement).style.display = 'block'
+                }}
+              />
+              {/* Fallback - Show coded version if image fails to load */}
+              <div className="fallback-infographic hidden relative rounded-3xl border border-white/10 bg-white/[0.02] p-10 sm:p-14 backdrop-blur-sm">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.15),_transparent_60%)]" />
 
                 <div className="relative flex flex-col gap-12">
@@ -132,7 +146,7 @@ export default function TechnologyEcosystem() {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {foundationProviders.map((provider) => (
                       <div
                         key={provider.name}

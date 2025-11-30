@@ -17,9 +17,6 @@ export default function Strategy() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/18 border border-accent-primary/35 text-accent-primary text-sm font-semibold mb-6">
-              📊 Strategy
-            </div>
             
             <h2 className="text-h1 font-bold text-text-primary mb-6">
               Strategic AI Assessment &
@@ -58,29 +55,29 @@ export default function Strategy() {
               </div>
             </div>
 
-            {/* Assessment Timeline */}
+            {/* Assessment Process */}
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center gap-2">
                 <CalendarClock className="w-5 h-5 text-accent-primary" />
-                Assessment Timeline
+                Assessment Process
               </h3>
               <div className="space-y-4">
                 <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                  <h4 className="font-semibold text-text-primary">Weeks 1–4: Discovery</h4>
+                  <h4 className="font-semibold text-text-primary">Discovery</h4>
                   <p className="text-sm text-text-secondary">
                     Stakeholder interviews, end-to-end process mapping, and a data/technology audit to establish the
                     current-state baseline and risks.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                  <h4 className="font-semibold text-text-primary">Weeks 5–10: Analysis</h4>
+                  <h4 className="font-semibold text-text-primary">Analysis</h4>
                   <p className="text-sm text-text-secondary">
                     Gap analysis, value-pool sizing, and opportunity identification, followed by prioritization of AI
                     use cases and executive alignment.
                   </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                  <h4 className="font-semibold text-text-primary">Weeks 11–18: Roadmap</h4>
+                  <h4 className="font-semibold text-text-primary">Roadmap</h4>
                   <p className="text-sm text-text-secondary">
                     Strategic AI roadmap with a phased implementation plan, resourcing and budget model, governance
                     framework, and defined KPIs/success criteria.
@@ -115,9 +112,6 @@ export default function Strategy() {
               </div>
             </div>
 
-            <p className="text-sm text-text-tertiary mb-8">
-              Durations are typical market ranges and may adjust with scale and complexity.
-            </p>
 
             <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
               Schedule your scoping session
@@ -135,9 +129,9 @@ export default function Strategy() {
           >
             <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
               <img
-                src="/assets/images/ai-transformation-strategy.png"
+                src="/assets/images/ai-transformation-strategy-abstract.png"
                 alt="Astrenox AI Transformation — Strategic Assessment & Roadmap Development"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain rounded-3xl"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none'
                   const fallback = e.currentTarget.parentElement?.querySelector('.fallback-infographic')
@@ -145,7 +139,7 @@ export default function Strategy() {
                 }}
               />
               <div className="fallback-infographic hidden rounded-2xl border border-white/10 bg-white/[0.03] p-8 shadow-[0_0_40px_rgba(56,189,248,0.06)] text-center">
-                <h3 className="text-xl font-bold mb-4 text-text-primary">30/60/90 Day Assessment</h3>
+                <h3 className="text-xl font-bold mb-4 text-text-primary">Assessment Process</h3>
                 <p className="text-text-secondary text-sm">Discovery • Analysis • Roadmap Development</p>
               </div>
             </div>

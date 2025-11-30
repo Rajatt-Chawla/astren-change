@@ -36,9 +36,6 @@ export default function TrustedBy() {
               />
             ))}
           </div>
-          <p className="mt-6 text-center text-sm text-text-muted">
-            Replace these placeholders with verified partner logos before launch.
-          </p>
         </motion.div>
       </div>
     </section>

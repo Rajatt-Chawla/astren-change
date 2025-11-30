@@ -3,8 +3,8 @@ export default function OurStory() {
     <section className="py-20 bg-bg-base">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-8 text-center">
-            Our Story
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+            <span className="metallic-text">Our Story</span>
           </h2>
           <div className="space-y-6 text-lg text-text-secondary">
             <p>

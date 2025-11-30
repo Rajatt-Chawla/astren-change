@@ -84,7 +84,7 @@ export default function EngagementModel() {
           ))}
         </div>
 
-        {/* Engagement Process Infographic */}
+        {/* Engagement Process with Deliverables */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,6 +92,61 @@ export default function EngagementModel() {
           viewport={{ once: true }}
           className="mb-16"
         >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-text-primary mb-4">Start from Proven Patterns</h3>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Our reusable frameworks and patterns accelerate delivery while maintaining quality standards.
+            </p>
+          </div>
+
+          {/* Process Steps with Deliverables */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {[
+              {
+                title: 'Discovery',
+                deliverables: ['Requirements doc', 'Technical spec', 'Architecture plan']
+              },
+              {
+                title: 'Design',
+                deliverables: ['System design', 'API contracts', 'Data models']
+              },
+              {
+                title: 'Development',
+                deliverables: ['Working code', 'Unit tests', 'Integration tests']
+              },
+              {
+                title: 'Deployment',
+                deliverables: ['Production deploy', 'Monitoring setup', 'Documentation']
+              }
+            ].map((step, index) => (
+              <motion.div
+                key={step.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-surface-card border border-border-soft rounded-xl p-6"
+              >
+                <div className="w-10 h-10 bg-accent-primary/14 border border-accent-primary/35 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-accent-primary font-bold">{index + 1}</span>
+                </div>
+                <h4 className="text-lg font-bold text-text-primary mb-3">{step.title}</h4>
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold text-text-muted uppercase tracking-wide mb-2">Deliverables:</p>
+                  <ul className="space-y-1.5">
+                    {step.deliverables.map((deliverable, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-text-secondary">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-primary flex-shrink-0" />
+                        <span>{deliverable}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Infographic */}
           <div className="relative mt-12 flex justify-center">
             <div className="relative max-w-[1100px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)]">
               <img

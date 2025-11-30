@@ -26,8 +26,8 @@ export default function OurTeam() {
     <section className="py-20 bg-bg-dark">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 text-center">
-            Our Team
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            <span className="metallic-text">Our Team</span>
           </h2>
           <p className="text-xl text-text-secondary text-center mb-16 max-w-3xl mx-auto">
             A diverse group of AI experts, engineers, and strategists united by a passion for innovation

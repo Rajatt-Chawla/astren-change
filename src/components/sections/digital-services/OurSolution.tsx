@@ -17,12 +17,9 @@ export default function OurSolution() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/18 border border-accent-primary/35 text-accent-primary text-sm font-semibold mb-6">
-            💡 Our Solution
-          </div>
           <h2 className="text-h1 font-bold text-text-primary mb-6">
             Strategy & Build
-            <span className="block gradient-text">AI-First Approach</span>
+            <span className="block gradient-text">AI-First Blueprint + Elite Engineering</span>
           </h2>
           <p className="text-lead text-text-secondary max-w-3xl mx-auto">
             We combine strategic consulting with hands-on engineering to deliver 

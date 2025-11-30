@@ -48,9 +48,6 @@ export default function WhatWeDo() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/18 border border-accent-primary/35 text-accent-primary text-sm font-semibold mb-6">
-            🛠️ What We Do
-          </div>
           <h2 className="text-h1 font-bold text-text-primary mb-6">
             Comprehensive AI
             <span className="block gradient-text">Engineering Services</span>

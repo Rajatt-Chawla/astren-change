@@ -68,7 +68,9 @@ export default function Certifications() {
           <span className="inline-flex items-center px-4 py-2 rounded-full border border-white/15 bg-white/5 text-xs font-semibold tracking-[0.35em] uppercase text-white/70">
             Trust &amp; Governance
           </span>
-          <h2 className="mt-6 text-h1 font-bold text-white">Certifications &amp; Standards</h2>
+          <h2 className="mt-6 text-h1 font-bold">
+            <span className="metallic-text">Certifications &amp; Standards</span>
+          </h2>
           <p className="mt-4 text-lg text-white/70">
             Our delivery model pairs high-velocity engineering with enterprise-grade security, compliance, and responsible AI practices.
           </p>

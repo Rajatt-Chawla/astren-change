@@ -38,7 +38,7 @@ export default function GetInTouch() {
           <span className="inline-flex items-center px-4 py-2 mb-6 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-[0.3em] uppercase text-white/70">
             Contact
           </span>
-          <h2 className="text-h1 font-bold text-white mb-4">Get In Touch</h2>
+          <h2 className="text-h1 font-bold mb-4 holo-fade">Get In Touch</h2>
           <p className="text-lg text-white/70">
             Contact us for a quote, a project discussion, or to explore how AI-first execution can unlock growth for your team.
           </p>
@@ -51,7 +51,7 @@ export default function GetInTouch() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true }}
-            className="bg-white/[0.04] border border-white/10 rounded-3xl p-10 shadow-[0_24px_60px_rgba(15,23,42,0.45)] backdrop-blur"
+            className="contact-form-container bg-white/[0.04] border border-white/10 rounded-3xl p-10 shadow-[0_24px_60px_rgba(15,23,42,0.45)] backdrop-blur"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">

@@ -3,8 +3,8 @@ export default function Hero() {
     <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-bg-dark to-bg-base overflow-hidden">
       <div className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-text-primary mb-6">
-            About <span className="text-accent-blue">Astrenox</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="metallic-text">About Astrenox</span>
           </h1>
           <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto">
             Building the future through AI innovation and digital transformation

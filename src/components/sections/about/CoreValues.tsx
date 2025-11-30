@@ -35,7 +35,7 @@ export default function CoreValues() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16">
       <h2 className="text-center text-3xl md:text-4xl font-extrabold tracking-tight">
-        Core Values
+        <span className="metallic-text">Core Values</span>
       </h2>
       <p className="mt-2 text-center text-white/70">
         The principles that guide everything we do

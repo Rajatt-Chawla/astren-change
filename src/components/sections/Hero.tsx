@@ -66,7 +66,7 @@ export default function Hero() {
                 mixBlendMode: "screen",
               }}
             />
-            <h1 className="text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.02em]">
+            <h1 className="no-holo-fade text-4xl md:text-6xl font-black leading-[0.95] tracking-[-0.02em]">
               Creating Engineering Disruption with{" "}
               <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
                 AI-First Digital Transformation

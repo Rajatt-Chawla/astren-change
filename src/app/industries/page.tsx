@@ -22,7 +22,7 @@ const INDUSTRIES = [
   },
   {
     title: "Technology · Media · Telecom",
-    copy: "We work with technology-driven businesses to enhance efficiency, improve collaboration and accelerate growth in a competitive digital landscape.",
+    copy: "We work with technology driven businesses to enhance efficiency, improve collaboration and accelerate growth in a competitive digital landscape.",
     icon: <Cpu className="h-5 w-5" />,
   },
   {

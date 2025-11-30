@@ -31,11 +31,11 @@ export default function Navigation() {
       name: 'Products', 
       href: '/products',
       dropdown: [
-        { name: 'Santrix — Enterprise AI Copilot', href: '/products/santrix' },
-        { name: 'Orzora — Market Research Copilot', href: '/products/orzora' }
+        { name: 'Solvoris — Enterprise AI Copilot', href: '/products/solvoris' },
+        { name: 'Akiren — AI Growth OS', href: '/products/orzora' }
       ]
     },
-    { name: 'Digital Services', href: '/consulting-modernization' },
+    { name: 'Digital & IT Consulting', href: '/consulting-modernization' },
     { name: 'Hire Talent', href: '/hire-talent' },
     { name: 'MVP Studio', href: '/mvp-studio' },
     { name: 'Who We Are', href: '/about-us' },
@@ -48,7 +48,7 @@ export default function Navigation() {
         <nav className="h-14 flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="text-xl font-semibold tracking-[-0.02em]">
-            <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
+            <span className="holo-fade neon-glow">
               Astrenox
             </span>
           </a>

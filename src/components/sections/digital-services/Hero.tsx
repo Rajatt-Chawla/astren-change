@@ -29,9 +29,8 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/18 border border-accent-primary/35 text-accent-primary text-sm font-semibold"
+              className="hidden"
             >
-              🏗️ Digital & IT Consulting
             </motion.div>
 
             {/* Title */}
@@ -41,8 +40,18 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-display-lg lg:text-display-lg font-extrabold text-text-primary leading-tight"
             >
-              Digital & IT Consulting and Custom Software & Application Modernization
+              Digital & IT Consulting
             </motion.h1>
+
+            {/* Sub-header */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              className="text-2xl md:text-3xl font-semibold text-text-secondary leading-tight"
+            >
+              Custom Software & Application Modernization
+            </motion.h2>
 
             {/* Subtitle */}
             <motion.p
@@ -51,7 +60,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-lead text-text-secondary max-w-2xl leading-relaxed"
             >
-              Strategy & Build — AI-first blueprint + elite engineering. We combine strategic 
+              Strategy & Build — AI-First Blueprint + Elite Engineering. We combine strategic 
               consulting with hands-on development to modernize your technology stack and 
               accelerate your digital transformation.
             </motion.p>
@@ -88,7 +97,7 @@ export default function Hero() {
                       <div className="w-3 h-3 bg-warning rounded-full"></div>
                       <div className="w-3 h-3 bg-success rounded-full"></div>
                     </div>
-                    <div className="text-xs text-text-muted">Digital Services</div>
+                    <div className="text-xs text-text-muted">Digital & IT Consulting</div>
                   </div>
 
                   {/* Services Visual */}

@@ -73,7 +73,7 @@ export default function EngagementModels() {
           viewport={{ once: true }}
           className="mt-12 text-center text-text-secondary"
         >
-          Commercials: Transparent monthly rates for individuals and feature or story-point pricing for squads to align with value delivered.
+          <span className="italic">Commercials:</span> Transparent monthly rates for individuals and feature or story-point pricing for squads to align with value delivered.
         </motion.p>
       </div>
     </section>

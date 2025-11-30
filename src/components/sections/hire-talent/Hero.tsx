@@ -29,9 +29,8 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-accent-primary/18 border border-accent-primary/35 text-accent-primary text-sm font-semibold"
+              className="hidden"
             >
-              👥 Hire Talent
             </motion.div>
 
             {/* Title */}
@@ -62,7 +61,17 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button variant="primary" size="lg" className="group" onClick={openCalendly}>
+              <Button 
+                variant="primary" 
+                size="lg" 
+                className="group" 
+                onClick={() => {
+                  const formElement = document.getElementById('talent-request-form')
+                  if (formElement) {
+                    formElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                }}
+              >
                 Get a shortlist
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-fast" />
               </Button>

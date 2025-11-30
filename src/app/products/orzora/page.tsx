@@ -1,27 +1,27 @@
 import { Metadata } from 'next'
-import ClientOrzora from './ClientOrzora'
+import ClientAkiren from './ClientAkiren'
 
 export const metadata: Metadata = {
-  title: 'Uncover the Why Behind Customer Behavior—Fast, Deep, and Incentivized',
+  title: 'Akiren - AI Growth OS for your brand',
   description:
-    'Orzora unifies AI research, expert intelligence, and tokenized participation with automation workflows, so you launch multilingual studies in minutes, collect richer qualitative answers, and trigger next steps across your stack.',
+    'AKIREN - The Dual-Avatar AI Growth OS. AKI: Growth & Referral Agent. REN: Research & Insight Agent. 5-10x faster campaign launch with AI-operated growth stack.',
   openGraph: {
-    title: 'Uncover the Why Behind Customer Behavior—Fast, Deep, and Incentivized',
+    title: 'Akiren - AI Growth OS for your brand',
     description:
-      'Orzora unifies AI research, expert intelligence, and tokenized participation with automation workflows, so you launch multilingual studies in minutes, collect richer qualitative answers, and trigger next steps across your stack.',
-    images: ['/images/og-Orzora.png'],
+      'AKIREN - The Dual-Avatar AI Growth OS. AKI: Growth & Referral Agent. REN: Research & Insight Agent. 5-10x faster campaign launch with AI-operated growth stack.',
+    images: ['/images/og-Akiren.png'],
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Uncover the Why Behind Customer Behavior—Fast, Deep, and Incentivized',
+    title: 'Akiren - AI Growth OS for your brand',
     description:
-      'Orzora unifies AI research, expert intelligence, and tokenized participation with automation workflows, so you launch multilingual studies in minutes, collect richer qualitative answers, and trigger next steps across your stack.',
-    images: ['/images/og-Orzora.png']
+      'AKIREN - The Dual-Avatar AI Growth OS. AKI: Growth & Referral Agent. REN: Research & Insight Agent. 5-10x faster campaign launch with AI-operated growth stack.',
+    images: ['/images/og-Akiren.png']
   }
 }
 
-export default function OrzoraPage() {
-  return <ClientOrzora />
+export default function AkirenPage() {
+  return <ClientAkiren />
 }
 

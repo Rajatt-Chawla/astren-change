@@ -138,6 +138,247 @@ button, a, input, textarea, select {
   background-clip: text;
 }
 
+.metallic-text {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(240, 240, 250, 0.9) 20%,
+    rgba(200, 200, 220, 0.7) 40%,
+    rgba(180, 180, 200, 0.6) 50%,
+    rgba(200, 200, 220, 0.7) 60%,
+    rgba(240, 240, 250, 0.9) 80%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: metallic-shine 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.2)) drop-shadow(0 4px 16px rgba(255, 255, 255, 0.1));
+  position: relative;
+}
+
+@keyframes metallic-shine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 100%;
+  }
+}
+
+/* Purple + Blue Holo Fade Effect for Headers */
+.holo-fade {
+  background: linear-gradient(
+    135deg,
+    #7C3AED 0%,
+    #8B5CF6 20%,
+    #22D3EE 40%,
+    #38BDF8 60%,
+    #7C3AED 80%,
+    #22D3EE 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: holo-shine 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 8px rgba(124, 58, 237, 0.3));
+}
+
+@keyframes holo-shine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Neon Glow Effect for Headers */
+.neon-glow {
+  color: #fff;
+  text-shadow: 
+    0 0 5px rgba(124, 58, 237, 0.8),
+    0 0 10px rgba(124, 58, 237, 0.8),
+    0 0 15px rgba(124, 58, 237, 0.6),
+    0 0 20px rgba(34, 211, 238, 0.6),
+    0 0 35px rgba(34, 211, 238, 0.4),
+    0 0 40px rgba(34, 211, 238, 0.3);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 
+      0 0 5px rgba(124, 58, 237, 0.8),
+      0 0 10px rgba(124, 58, 237, 0.8),
+      0 0 15px rgba(124, 58, 237, 0.6),
+      0 0 20px rgba(34, 211, 238, 0.6),
+      0 0 35px rgba(34, 211, 238, 0.4),
+      0 0 40px rgba(34, 211, 238, 0.3);
+  }
+  to {
+    text-shadow: 
+      0 0 10px rgba(124, 58, 237, 1),
+      0 0 20px rgba(124, 58, 237, 0.9),
+      0 0 30px rgba(124, 58, 237, 0.8),
+      0 0 40px rgba(34, 211, 238, 0.8),
+      0 0 50px rgba(34, 211, 238, 0.6),
+      0 0 60px rgba(34, 211, 238, 0.5);
+  }
+}
+
+/* Apply metallic text with fade to all h1 and h2 headers globally (default) */
+h1:not(.no-metallic):not(.holo-fade),
+h2:not(.no-metallic):not(.holo-fade) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(240, 240, 250, 0.9) 20%,
+    rgba(200, 200, 220, 0.7) 40%,
+    rgba(180, 180, 200, 0.6) 50%,
+    rgba(200, 200, 220, 0.7) 60%,
+    rgba(240, 240, 250, 0.9) 80%,
+    rgba(255, 255, 255, 0.98) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: metallic-shine 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.2)) drop-shadow(0 4px 16px rgba(255, 255, 255, 0.1));
+}
+
+/* Contact form holo fade theme */
+.contact-form-container {
+  position: relative;
+  isolation: isolate;
+}
+
+.contact-form-container::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.8),
+    rgba(34, 211, 238, 0.8),
+    rgba(124, 58, 237, 0.8)
+  );
+  background-size: 200% 200%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: holo-border-shine 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes holo-border-shine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus,
+.contact-form-container select:focus {
+  border-color: rgba(124, 58, 237, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15), 0 0 20px rgba(34, 211, 238, 0.3) !important;
+  outline: none;
+}
+
+/* Neon line for process flow */
+.neon-line {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(124, 58, 237, 0.3) 10%,
+    rgba(34, 211, 238, 0.5) 50%,
+    rgba(124, 58, 237, 0.3) 90%,
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 10px rgba(124, 58, 237, 0.6),
+    0 0 20px rgba(34, 211, 238, 0.4),
+    0 0 30px rgba(124, 58, 237, 0.3);
+  animation: neon-line-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neon-line-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 10px rgba(124, 58, 237, 0.6),
+      0 0 20px rgba(34, 211, 238, 0.4),
+      0 0 30px rgba(124, 58, 237, 0.3);
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow: 
+      0 0 20px rgba(124, 58, 237, 0.9),
+      0 0 40px rgba(34, 211, 238, 0.7),
+      0 0 60px rgba(124, 58, 237, 0.5);
+    opacity: 1;
+  }
+}
+
+/* Process box enhancements */
+.process-box {
+  position: relative;
+  background: var(--color-surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-box::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(124, 58, 237, 0.2),
+    rgba(34, 211, 238, 0.2),
+    rgba(124, 58, 237, 0.2)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.process-box:hover::before {
+  opacity: 1;
+}
+
+.process-box:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(124, 58, 237, 0.2) inset,
+    0 0 30px rgba(124, 58, 237, 0.15),
+    0 0 60px rgba(34, 211, 238, 0.1);
+  transform: translateY(-2px);
+}
+
 .gradient-border {
   border: 1px solid transparent;
   background: linear-gradient(var(--color-bg-base), var(--color-bg-base)) padding-box,

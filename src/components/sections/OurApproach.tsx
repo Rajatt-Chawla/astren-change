@@ -11,56 +11,88 @@ export default function OurApproach() {
       number: 1,
       icon: Target,
       title: 'Vision and Strategy',
-      description: 'Define a clear purpose for AI that ties directly to growth, efficiency, and risk reduction. Align executive sponsorship and agree on shared language, target outcomes, and the scope of transformation. Establish the north star metrics that will guide choices and create momentum across the business.',
+      description: 'Focus on outcomes (growth, efficiency, risk) and "North Star metrics".',
+      points: [
+        'Team aligns executive sponsors around a common language for AI, shared principles, and clearly bounded transformation themes so that every initiative supports the same strategic narrative',
+        'Forward deployed engineers establish a concise set of north star metrics and supporting indicators that guide all investment decisions, inform trade offs, and create visible momentum across business units'
+      ],
       color: 'sky'
     },
     {
       number: 2,
       icon: ClipboardCheck,
-      title: 'Capability Readiness and Gap Assessment',
-      description: 'Assess people, processes, data, and technology to understand what is strong and what is missing. Benchmark current maturity with a structured framework, map critical risks, and identify the foundational capabilities that must be in place before scaling. Produce a readiness scorecard that focuses investment where it matters most.',
+      title: 'Capability Readiness',
+      description: 'Benchmarking against maturity frameworks and assessing gaps.',
+      points: [
+        'Team benchmark the organization against a proven maturity framework, highlight capability gaps, and surface operational, regulatory, and security risks that must be addressed early',
+        'We synthesize these insights into a focused readiness view that directs capital, leadership attention, and change efforts to the few levers that unlock disproportionate value'
+      ],
       color: 'blue'
     },
     {
       number: 3,
       icon: Network,
-      title: 'Architecture and Systems Mapping',
-      description: 'Design the digital backbone that allows AI to operate safely and at speed. Document how core systems connect across the value chain from business platforms to operational systems, define the enterprise data model, and set standards for interoperability, security, governance, and model lifecycle management. The result is a reference architecture that guides every build.',
+      title: 'Architecture and Systems',
+      description: 'Mapping core systems and defining the enterprise data model.',
+      points: [
+        'Architect maps how core systems, platforms, and operational workflows connect across the value chain so that AI solutions can consume and act on data without creating fragmentation',
+        'Our team defines the enterprise data model and establishes clear standards for interoperability, security, governance, observability, and model lifecycle management, resulting in a reference architecture that guides every subsequent build'
+      ],
       color: 'cyan'
     },
     {
       number: 4,
       icon: Briefcase,
-      title: 'Use Case Portfolio and Prioritization',
-      description: 'Build a pipeline of feasible AI initiatives and score them on impact, effort, time to value, and dependency risk. Balance quick wins that unlock confidence with strategic bets that reshape how the business operates. Translate each priority into a simple business case with success criteria and an adoption plan.',
+      title: 'Use Case Portfolio',
+      description: 'Constructing a portfolio of "quick wins" and "strategic bets".',
+      points: [
+        'We curate a balanced mix of quick win initiatives that demonstrate confidence and deeper strategic bets that reshape how the organization sells, serves, operates, and decides',
+        'PM translates priority opportunities into concise business cases with explicit value drivers, ownership, and adoption pathways that the executive team can commit to'
+      ],
       color: 'indigo'
     },
     {
       number: 5,
       icon: Users,
-      title: 'Governance and Execution Alignment',
-      description: 'Create a delivery model that mobilizes the organization. Establish decision rights, escalation paths, and compliance guardrails, and form a cross functional program team that includes business owners, data leaders, security, and change management. Align incentives and KPIs across departments so execution stays coordinated.',
+      title: 'Governance and Execution',
+      description: 'Defining decision rights and compliance guardrails.',
+      points: [
+        'We define decision rights, escalation routes, and compliance guardrails, and convene a cross functional leadership group spanning business, data, technology, security, and change',
+        'Our team incentives and performance indicators across functions so that teams are rewarded for shared outcomes, not isolated experiments, ensuring coordinated execution at scale'
+      ],
       color: 'purple'
     },
     {
       number: 6,
       icon: Rocket,
-      title: 'Scalable Execution Framework',
-      description: 'Stand up repeatable delivery methods that turn strategy into shipped outcomes. Standardize discovery, design, data preparation, model development, evaluation, and deployment with quality gates at each step. Support site by site or line by line rollout and embed change management and training into every release so adoption sticks.',
+      title: 'Scalable Execution',
+      description: 'Standardizing the journey from discovery to deployment.',
+      points: [
+        'Deployed engineers standardize the journey from problem discovery through design, data preparation, experimentation, model development, evaluation, and deployment, with clear quality checkpoints at each stage',
+        'Team enables progressive rollout across sites, regions, or product lines and embed communication, training, and support into every release so that change is absorbed and usage becomes routine'
+      ],
       color: 'teal'
     },
     {
       number: 7,
       icon: Database,
       title: 'Data and Intelligence Activation',
-      description: 'Operationalize trustworthy data and real time insight. Implement pipelines, feature stores, and monitoring that keep models fresh and reliable. Deliver dashboards, alerts, and copilots that put decisions in the flow of work, and connect these insights to continuous improvement loops that raise performance month after month.',
+      description: 'Transforming data into production assets and deploying decision surfaces.',
+      points: [
+        'PM deploys decision surfaces such as analyst ready views, operational dashboards, alerting mechanisms, copilots, and assistants that embed intelligence directly into the daily flow of work',
+        'Our team connects these insights with continuous improvement cycles so that operations, commercial teams, and leadership see measurable performance uplift month after month'
+      ],
       color: 'emerald'
     },
     {
       number: 8,
       icon: RefreshCw,
       title: 'Feedback and Adaptation Loops',
-      description: 'Measure what is working and adjust fast. Track leading and lagging indicators, capture frontline feedback, and close the loop between delivery teams and business strategy. Use structured reviews and recalibration points to retire low value work, scale proven patterns, and keep the roadmap aligned with changing market conditions.',
+      description: 'Tracking indicators and institutionalizing feedback channels.',
+      points: [
+        'Institutionalize structured feedback channels from frontline teams and owners back into product, data, and leadership groups, ensuring rapid course correction',
+        'Engineers run regular portfolio and strategy reviews to retire low value initiatives, scale proven patterns, and keep the AI roadmap tightly aligned with evolving market dynamics and organizational ambition'
+      ],
       color: 'violet'
     }
   ]
@@ -112,126 +144,14 @@ export default function OurApproach() {
         }}
       />
 
-      {/* Central Infographic */}
-      <div className="relative mt-12 mb-20 flex justify-center">
-        <div className="relative max-w-[1200px] w-full rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(56,189,248,0.15)] bg-white/[0.03] border border-white/10 p-8 md:p-12">
-          {/* Try to load the image, but show SVG fallback by default */}
-          <div className="relative">
-            <img
-              src="/assets/images/ai-transformation-systematic-approach.png"
-              alt="Astrenox Systematic Approach to AI Transformation — 8-Step Framework"
-              className="w-full h-auto object-contain"
-              onLoad={(e) => {
-                // Hide SVG if image loads successfully
-                const svgFallback = e.currentTarget.parentElement?.querySelector('.svg-infographic-fallback')
-                if (svgFallback) (svgFallback as HTMLElement).style.display = 'none'
-              }}
-              onError={(e) => {
-                // Hide img if it fails to load
-                e.currentTarget.style.display = 'none'
-              }}
-            />
-            {/* SVG Infographic Fallback - Always visible until image loads */}
-            <div className="svg-infographic-fallback">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold mb-3 text-text-primary">Systematic Approach to AI Transformation</h3>
-                <p className="text-text-secondary">8-Step Framework from Vision to Continuous Improvement</p>
-              </div>
-              
-              {/* Visual Flow Diagram */}
-              <div className="relative max-w-4xl mx-auto">
-                <svg viewBox="0 0 800 600" className="w-full h-auto">
-                  <defs>
-                    <linearGradient id="stepGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.8" />
-                      <stop offset="100%" stopColor="#60a5fa" stopOpacity="0.4" />
-                    </linearGradient>
-                    <linearGradient id="stepGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-                      <stop offset="100%" stopColor="#22d3ee" stopOpacity="0.4" />
-                    </linearGradient>
-                    <linearGradient id="stepGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#22d3ee" stopOpacity="0.8" />
-                      <stop offset="100%" stopColor="#818cf8" stopOpacity="0.4" />
-                    </linearGradient>
-                    <linearGradient id="stepGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#6366f1" stopOpacity="0.8" />
-                      <stop offset="100%" stopColor="#a78bfa" stopOpacity="0.4" />
-                    </linearGradient>
-                    <filter id="glow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                      <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
-                      </feMerge>
-                    </filter>
-                  </defs>
-                  
-                  {/* Central connecting line */}
-                  <line x1="400" y1="50" x2="400" y2="550" stroke="rgba(56,189,248,0.3)" strokeWidth="2" strokeDasharray="5,5"/>
-                  
-                  {/* Step 1 - Top */}
-                  <circle cx="400" cy="75" r="35" fill="url(#stepGradient1)" filter="url(#glow)"/>
-                  <text x="400" y="82" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">01</text>
-                  <text x="400" y="125" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="12" fontWeight="600">Vision & Strategy</text>
-                  
-                  {/* Step 2 - Right */}
-                  <circle cx="550" cy="150" r="35" fill="url(#stepGradient2)" filter="url(#glow)"/>
-                  <text x="550" y="157" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">02</text>
-                  <text x="550" y="200" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11">Capability Readiness</text>
-                  
-                  {/* Step 3 - Left */}
-                  <circle cx="250" cy="225" r="35" fill="url(#stepGradient3)" filter="url(#glow)"/>
-                  <text x="250" y="232" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">03</text>
-                  <text x="250" y="275" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11">Architecture & Systems</text>
-                  
-                  {/* Step 4 - Right */}
-                  <circle cx="550" cy="300" r="35" fill="url(#stepGradient4)" filter="url(#glow)"/>
-                  <text x="550" y="307" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">04</text>
-                  <text x="550" y="350" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11">Use Case Portfolio</text>
-                  
-                  {/* Step 5 - Left */}
-                  <circle cx="250" cy="375" r="35" fill="url(#stepGradient1)" filter="url(#glow)"/>
-                  <text x="250" y="382" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">05</text>
-                  <text x="250" y="425" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11">Governance & Alignment</text>
-                  
-                  {/* Step 6 - Right */}
-                  <circle cx="550" cy="450" r="35" fill="url(#stepGradient2)" filter="url(#glow)"/>
-                  <text x="550" y="457" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">06</text>
-                  <text x="550" y="500" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11">Scalable Execution</text>
-                  
-                  {/* Step 7 - Left */}
-                  <circle cx="250" cy="525" r="35" fill="url(#stepGradient3)" filter="url(#glow)"/>
-                  <text x="250" y="532" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">07</text>
-                  <text x="250" y="575" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="11">Data & Intelligence</text>
-                  
-                  {/* Step 8 - Bottom */}
-                  <circle cx="400" cy="550" r="35" fill="url(#stepGradient4)" filter="url(#glow)"/>
-                  <text x="400" y="557" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">08</text>
-                  
-                  {/* Connecting lines */}
-                  <path d="M 400 110 L 550 115" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                  <path d="M 550 185 L 250 190" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                  <path d="M 250 260 L 550 265" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                  <path d="M 550 335 L 250 340" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                  <path d="M 250 410 L 550 415" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                  <path d="M 550 485 L 250 490" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                  <path d="M 250 560 L 400 515" stroke="rgba(56,189,248,0.4)" strokeWidth="2" fill="none" strokeDasharray="3,3"/>
-                </svg>
-              </div>
-              
-              <div className="mt-8 text-center">
-                <p className="text-xs text-text-muted italic">Replace with high-res generated infographic image</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Steps Grid - Alternating Left and Right */}
       <div className="relative max-w-7xl mx-auto">
-        {/* Central vertical line (connector) */}
-        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent transform -translate-x-1/2" />
+        {/* Central vertical line (connector) with enhanced neon glow */}
+        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 transform -translate-x-1/2 neon-line" style={{
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(124, 58, 237, 0.4) 10%, rgba(34, 211, 238, 0.6) 50%, rgba(124, 58, 237, 0.4) 90%, transparent 100%)',
+          boxShadow: '0 0 20px rgba(124, 58, 237, 0.8), 0 0 40px rgba(34, 211, 238, 0.6), 0 0 60px rgba(124, 58, 237, 0.4)',
+          animation: 'neon-line-pulse 3s ease-in-out infinite'
+        }} />
         
         <div className="space-y-12">
           {steps.map((step, index) => {
@@ -252,16 +172,37 @@ export default function OurApproach() {
               >
                 {/* Step Content - Left aligned for odd, right aligned for even */}
                 <div className={`${isLeft ? 'lg:pr-12 lg:text-right' : 'lg:col-start-2 lg:pl-12 lg:text-left'} flex-1`}>
-                  <div className={`inline-flex items-center gap-3 mb-4 ${isLeft ? 'lg:flex-row-reverse' : ''}`}>
-                    <div className={`w-14 h-14 ${colorClasses.bg} border ${colorClasses.border} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                      <IconComponent className={`w-7 h-7 ${colorClasses.text}`} />
+                  <div className={`process-box group relative bg-surface-card border ${colorClasses.border} rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl`} style={{
+                    boxShadow: '0 0 0 1px rgba(255, 255, 255, 0.05) inset, 0 4px 6px rgba(0, 0, 0, 0.1)'
+                  }}>
+                    {/* Thin background glow effect - always visible */}
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colorClasses.bg} opacity-20 blur-md transition-opacity duration-300 -z-10`} />
+                    {/* Enhanced hover glow effect */}
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colorClasses.bg} opacity-0 group-hover:opacity-40 blur-xl transition-opacity duration-300 -z-10`} />
+                    
+                    <div className={`inline-flex items-center gap-3 mb-4 ${isLeft ? 'lg:flex-row-reverse' : ''}`}>
+                      <div className={`w-14 h-14 ${colorClasses.bg} border ${colorClasses.border} rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                        <IconComponent className={`w-7 h-7 ${colorClasses.text}`} />
+                      </div>
+                      <div className={`text-4xl font-black ${colorClasses.text}`}>
+                        {String(step.number).padStart(2, '0')}
+                      </div>
                     </div>
-                    <div className={`text-4xl font-black ${colorClasses.text}`}>
-                      {String(step.number).padStart(2, '0')}
-                    </div>
+                    <h3 className="text-2xl font-bold text-text-primary mb-3">{step.title}</h3>
+                    <p className="text-text-secondary leading-relaxed mb-4">{step.description}</p>
+                    
+                    {/* Bullet points */}
+                    {step.points && step.points.length > 0 && (
+                      <ul className="space-y-2 mt-4">
+                        {step.points.map((point, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-text-secondary text-sm leading-relaxed">
+                            <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${colorClasses.text} bg-current flex-shrink-0`} />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
-                  <h3 className="text-2xl font-bold text-text-primary mb-4">{step.title}</h3>
-                  <p className="text-text-secondary leading-relaxed">{step.description}</p>
                 </div>
 
                 {/* Spacer for opposite side */}
@@ -273,6 +214,80 @@ export default function OurApproach() {
               </motion.div>
             )
           })}
+        </div>
+      </div>
+
+      {/* Assessment Process Section */}
+      <div className="relative mt-24">
+        <div className="mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
+            Assessment Process
+          </h3>
+          <p className="text-white/70 max-w-2xl mx-auto">
+            A structured approach to understanding your organization's AI readiness and building a strategic roadmap.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              title: 'Discovery',
+              description: 'Stakeholder interviews, end-to-end process mapping, and a data/technology audit to establish the current-state baseline and risks.',
+              gradient: 'from-sky-500/20 to-blue-500/10'
+            },
+            {
+              title: 'Analysis',
+              description: 'Gap analysis, value-pool sizing, and opportunity identification, followed by prioritization of AI use cases and executive alignment.',
+              gradient: 'from-purple-500/20 to-indigo-500/10'
+            },
+            {
+              title: 'Roadmap',
+              description: 'Strategic AI roadmap with a phased implementation plan, resourcing and budget model, governance framework, and defined KPIs/success criteria.',
+              gradient: 'from-cyan-500/20 to-teal-500/10'
+            }
+          ].map((step, index) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="relative group"
+            >
+              <div className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-8 h-full transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06]">
+                {/* Abstract art placeholder background */}
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${step.gradient} opacity-30 blur-2xl -z-10`} />
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{
+                  background: `radial-gradient(circle at ${index % 2 === 0 ? '20%' : '80%'} ${index === 1 ? '50%' : '30%'}, rgba(124, 58, 237, 0.15), transparent 60%)`
+                }} />
+                
+                {/* Abstract art pattern overlay */}
+                <div className="absolute top-4 right-4 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <defs>
+                      <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="rgba(124, 58, 237, 0.3)" />
+                        <stop offset="100%" stopColor="rgba(34, 211, 238, 0.3)" />
+                      </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke={`url(#gradient-${index})`} strokeWidth="2" />
+                    <path d="M 20 50 Q 50 20, 80 50 Q 50 80, 20 50" fill="none" stroke={`url(#gradient-${index})`} strokeWidth="1.5" />
+                    <circle cx="50" cy="50" r="15" fill={`url(#gradient-${index})`} opacity="0.5" />
+                  </svg>
+                </div>
+
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 border border-white/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl font-bold text-accent-primary">{index + 1}</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-text-primary mb-3">{step.title}</h4>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 

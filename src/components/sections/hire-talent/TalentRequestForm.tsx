@@ -7,7 +7,7 @@ import Button from '@/components/ui/Button'
 
 export default function TalentRequestForm() {
   return (
-    <section className="py-24 bg-bg-base">
+    <section id="talent-request-form" className="py-24 bg-bg-base">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -16,7 +16,7 @@ export default function TalentRequestForm() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-h1 font-bold text-text-primary mb-6">
+          <h2 className="text-h1 font-bold mb-6 holo-fade">
             Talent Request Form
           </h2>
           <p className="text-lead text-text-secondary max-w-3xl mx-auto">
@@ -29,7 +29,7 @@ export default function TalentRequestForm() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-surface-card border border-border-soft rounded-xl p-8"
+          className="contact-form-container bg-surface-card border border-border-soft rounded-xl p-8"
         >
           <form className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">

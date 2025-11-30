@@ -3,8 +3,8 @@ export default function OurMission() {
     <section className="py-20 bg-bg-dark">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-8 text-center">
-            Our Mission
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
+            <span className="metallic-text">Our Mission</span>
           </h2>
           <div className="bg-bg-base p-8 md:p-12 rounded-2xl border border-border-subtle">
             <p className="text-xl md:text-2xl text-text-primary text-center leading-relaxed mb-6">
